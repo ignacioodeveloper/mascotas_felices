@@ -1,0 +1,1 @@
+// script product card homepage
