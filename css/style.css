@@ -89,3 +89,8 @@
   .sinsubrayado {
     text-decoration: none;
   }
+
+
+  input[type="text"], input[type="email"], input[type="password"], textarea{
+    border-width: 3px !important;
+  }
