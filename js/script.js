@@ -18,7 +18,7 @@
     })
   })()
 
-
+// js para iterar opciones
   // js para select comunas
   fetch('opciones.json')
   .then(response => response.json())
@@ -50,12 +50,14 @@
       }
     });
 
-    const passwordConfirm = document.querySelector('#exampleInputPassword1');
-    passwordConfirm.addEventListener('input', () => {
-      const password = document.querySelector('#password').value;
-      if (passwordConfirm.value !== password) {
-        passwordConfirm.setCustomValidity('Las contraseñas no coinciden');
-      } else {
-        passwordConfirm.setCustomValidity('');
-      }
-    });
+
+// js para confirmar password
+const passwordConfirm = document.querySelector('#exampleInputPassword1');
+passwordConfirm.addEventListener('input', () => {
+  const password = document.querySelector('#password').value;
+  if (passwordConfirm.value !== password) {
+    passwordConfirm.setCustomValidity('Las contraseñas no coinciden');
+  } else {
+    passwordConfirm.setCustomValidity('');
+  }
+});

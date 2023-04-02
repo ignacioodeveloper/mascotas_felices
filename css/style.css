@@ -94,3 +94,7 @@
   input[type="text"], input[type="email"], input[type="password"], textarea{
     border-width: 3px !important;
   }
+
+  .form-control-small {
+    max-width: 50%;
+}
