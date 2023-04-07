@@ -30,39 +30,39 @@
   </head>
   <body>
     <!-- HEADER NAV-BAR -->
-    <header
-      class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom container"
-      style="margin-inline: 5%"
-    >
-      <a
-        href="/"
-        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-      >
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-        <img src="img/icon.png" alt="" width="40" height="32" />
-        <span class="fs-4">Mascotas Felices</span>
-      </a>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link active" aria-current="page"
-            >Inicio</a
-          >
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
 
-        <button type="button" class="btn btn-outline-primary me-2">
-          Ingresar
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="registro.html"
-          ><button type="button" class="btn btn-primary">
-            Crea tu cuenta
-          </button></a
-        >
-      </ul>
-    </header>
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="img/icon.png" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"></img>
+          
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Inicio</a></li>
+            <li><a href="#" class="nav-link px-2 text-primary">Productos</a></li>
+            <li><a href="#" class="nav-link px-2 text-primary">Nosotros</a></li>
+
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control" placeholder="Buscar..." aria-label="Search">
+          </form>
+          <div class="text-end">
+            <a href="login.html"><button type="button" class="btn btn-outline-primary me-2">Ingresar</button></a>
+            <a href="registro.html"><button type="button" class="btn btn-warning">Crea tu Cuenta</button></a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
 
     <div id="carouselExampleInterval" class="carousel slide container" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -346,7 +346,7 @@
 
     <!-- FOOTER -->
     <footer
-      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container"
     >
       <p class="col-md-4 mb-0 text-body-secondary">
         © 2023 Mascotas Felices encuentranos en: Moneda 627, Santiago
