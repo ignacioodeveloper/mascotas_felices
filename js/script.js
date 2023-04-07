@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $('.slick-carousel').slick({
     // opciones de configuración de Slick
     dots: true,
@@ -35,4 +36,7 @@ $(document).ready(function(){
       // instead of a settings object
   ]
   });
+
+  $('.single-item').slick();
+
 });
