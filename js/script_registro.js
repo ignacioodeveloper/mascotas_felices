@@ -51,3 +51,26 @@
     });
 
 
+  const password1 = document.getElementById("password1");
+  const password2 = document.getElementById("password2");
+  const password2ErrorMessage = document.querySelector("#password2 + .invalid-feedback");
+
+  password1.addEventListener("input", () => {
+    if (password1.value !== password2.value) {
+      password2.setCustomValidity("Las contraseñas no coinciden.");
+      password2ErrorMessage.style.display = "block";
+    } else {
+      password2.setCustomValidity("");
+      password2ErrorMessage.style.display = "none";
+    }
+  });
+
+  password2.addEventListener("input", () => {
+    if (password1.value !== password2.value) {
+      password2.setCustomValidity("Las contraseñas no coinciden.");
+      password2ErrorMessage.style.display = "block";
+    } else {
+      password2.setCustomValidity("");
+      password2ErrorMessage.style.display = "none";
+    }
+  });
