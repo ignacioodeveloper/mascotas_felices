@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  // funcion que obtiene datos de api fakestore
   $('#btn-obtener-ropas').click(function() {
     
     // funcion obtener datos api fakestore
@@ -62,14 +63,18 @@ $(document).ready(function(){
   ]
   });
 
+  // nombrando la clase que usara slick
   $('.single-item').slick();
 
+
+  // header and footer se cargaran automaticamente al inciar la pag
     // header
   $("#navbar").load("navbar.html",function(response, status, xhr) {
     if (status === "error") {
       console.error("Error al cargar header: " + xhr.status + " " + xhr.statusText);
     }
   });
+
   // and footer
   $("#footer").load("footer.html",function(response, status, xhr){
     if (status === "error") {
