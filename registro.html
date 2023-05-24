@@ -48,7 +48,7 @@
 
             <!-- rut -->
             <div class="mb-3">
-              <label for="rut" class="form-label">RUT</label>
+              <label for="rut">RUT</label>
               <input
                 required
                 type="text"
@@ -56,6 +56,8 @@
                 class="form-control"
                 id="rut"
                 aria-describedby="rutHelp"
+
+                
               />
               <div id="rutHelp" class="form-text">
                 Escriba rut sin puntos y con guion
@@ -63,8 +65,12 @@
               <div class="invalid-feedback">El campo rut es obligatorio</div>
             </div>
 
+
+
             <!-- nombre y apellido -->
             <div class="row">
+
+
               <!-- nombres -->
               <div class="col mb-3">
                 <label for="name" class="form-label">Nombre</label>
@@ -73,11 +79,13 @@
                   type="text"
                   placeholder="Ingresa tu nombre"
                   class="form-control"
-                  id="rut"
-                  aria-describedby="rutHelp"
+                  id="name"
+                  aria-describedby="nameHelp"
                 />
-                <div class="invalid-feedback">Ingrese el Nombre</div>
+                <div id="nameHelp" class="invalid-feedback">Ingrese un nombre válido (más de 2 letras y solo letras).</div>
               </div>
+
+
               <!-- apellidos -->
               <div class="col mb-3">
                 <label for="name" class="form-label">Apellido</label>
@@ -224,6 +232,11 @@
     <div id="footer">
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
 
     <!-- cdn bootstrap -->
     <script
@@ -242,7 +255,7 @@
 
     <!-- script archivo js -->
     <script src="js/script.js"></script>
-
+    <script src="js/script_registro.js"></script>
 
     <!-- cdn slick -requiere jquery -->
     <script
