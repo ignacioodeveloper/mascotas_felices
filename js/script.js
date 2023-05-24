@@ -64,31 +64,21 @@ $(document).ready(function(){
 
   $('.single-item').slick();
 
+    // header
+  $("#navbar").load("navbar.html",function(response, status, xhr) {
+    if (status === "error") {
+      console.error("Error al cargar header: " + xhr.status + " " + xhr.statusText);
+    }
+  });
+  // and footer
+  $("#footer").load("footer.html",function(response, status, xhr){
+    if (status === "error") {
+      console.error("Error al cargar footer: " + xhr.status + " " + xhr.statusText);
+    }
+  });
+
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const navbarContainer = document.getElementById("navbar");
-  const footerContainer = document.getElementById("footer");
 
-  function loadHTMLContent(url, container) {
-    const xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          container.innerHTML = xhr.responseText;
-        } else {
-          console.error("Error al cargar el archivo HTML: " + url);
-        }
-      }
-    };
-
-    xhr.open("GET", url, true);
-    xhr.send();
-  }
-
-  loadHTMLContent("navbar.html", navbarContainer);
-  loadHTMLContent("footer.html", footerContainer);
-});
 
 
