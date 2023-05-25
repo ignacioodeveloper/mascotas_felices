@@ -125,3 +125,192 @@
     ></script>
   </body>
 </html>
+
+
+    <!-- formulario de cliente -->
+    <form class="row g-4 needs-validation" novalidate>
+      <div class="container-fluid">
+        <!-- todos los datos del cliente -->
+        <div class="row justify-content-center">
+          <!-- datos del cliente -->
+          <div class="col-sm-12 col-md-4 col-lg-4" id="datos">
+
+            <!-- rut -->
+            <div class="mb-3">
+              <label for="rut">RUT</label>
+              <input
+                required
+                type="text"
+                placeholder="10123123-k"
+                class="form-control"
+                id="rut"
+                aria-describedby="rutHelp"
+
+                
+              />
+              <div id="rutHelp" class="form-text">
+                Escriba rut sin puntos y con guion
+              </div>
+              <div class="invalid-feedback">El campo rut es obligatorio</div>
+            </div>
+
+
+
+            <!-- nombre y apellido -->
+            <div class="row">
+
+
+              <!-- nombres -->
+              <div class="col mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input
+                  required
+                  type="text"
+                  placeholder="Ingresa tu nombre"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="nameHelp"
+                />
+                <div id="nameHelp" class="invalid-feedback">Ingrese un nombre válido (más de 2 letras y solo letras).</div>
+              </div>
+
+
+              <!-- apellidos -->
+              <div class="col mb-3">
+                <label for="name" class="form-label">Apellido</label>
+                <input
+                  required
+                  type="text"
+                  placeholder="Ingresa tu apellido"
+                  class="form-control"
+                  id="rut"
+                  aria-describedby="rutHelp"
+                />
+                <div class="invalid-feedback">Ingrese el apellido</div>
+              </div>
+            </div>
+
+            <!-- correo -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                required
+                type="text"
+                placeholder="tuemail@tudominio.cl"
+                class="form-control"
+                id="rut"
+                aria-describedby="rutHelp"
+              />
+              <div id="rutHelp" class="form-text">Escriba su Email</div>
+              <div class="invalid-feedback">El email es obligatorio</div>
+            </div>
+
+            <!-- direccion -->
+            <div class="row">
+              <!-- calle -->
+              <div class="col mb-3">
+                <label for="email" class="form-label">Calle</label>
+                <input
+                  required
+                  type="text"
+                  placeholder="San Pablo"
+                  class="form-control"
+                  id="rut"
+                  aria-describedby="rutHelp"
+                />
+                <div id="rutHelp" class="form-text">
+                  Ingrese su calle o avenida
+                </div>
+                <div class="invalid-feedback">
+                  La calle o avenida es obligatoria
+                </div>
+              </div>
+              <!-- numero -->
+              <div class="col mb-3">
+                <label for="email" class="form-label">Numero</label>
+                <input
+                  required
+                  type="text"
+                  placeholder="2021"
+                  class="form-control"
+                  id="rut"
+                  aria-describedby="rutHelp"
+                />
+                <div id="rutHelp" class="form-text">
+                  Ingrese el numero de la direccion
+                </div>
+                <div class="invalid-feedback">El numero es obligatorio</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="opciones-select" class="form-label"
+                >Seleccione una opción</label
+              >
+              <select class="form-select" id="opciones-select" required>
+                <option value="" disabled selected>Comuna</option>
+                <!-- Las opciones se cargarán aquí dinámicamente desde el archivo JSON -->
+              </select>
+              <div class="invalid-feedback">
+                Por favor seleccione una Comuna.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password1" name="password1" required aria-describedby="password1Help">
+              <div id="passwordHelp" class="form-text">
+                La contraseña debe tener entre 8 y 20 caracteres, 
+                y que esos caracteres sean letras, números, 
+                el símbolo @ o el guión.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password2" class="form-label">Repetir contraseña</label>
+              <input type="password" class="form-control" id="password2" name="password2" required pattern="^[\w@-]{8,20}$">
+              <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1">
+                <strong>Subscribirme a la Fundacion</strong>
+              </label>
+              <div id="nevershaverHelp" class="form-text">
+                Deseo subscribirme con un aporte de $ 3.000 mensuales y obtener
+                un 5% de descuento en mis compras.
+              </div>
+            </div>
+          </div>
+
+          <!-- foto cliente -->
+          <div class="col-sm-12 col-md-4 text-center" id="foto">
+            <img src="img/icon_user.jpg" alt="" />
+            <br />
+            <br />
+            <div>
+              <label for="formFileLg" class="form-label"
+                >Large file input example</label
+              >
+              <input
+                class="form-control form-control-lg"
+                id="formFileLg"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- botones -->
+        <div class="row" id="botones">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="reset" class="btn btn-primary">Limpiar</button>
+          </div>
+      </div>
+      </div>
+    </form>
