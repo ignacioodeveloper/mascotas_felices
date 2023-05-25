@@ -118,6 +118,13 @@ $(document).ready(function(){
     return dv === lastChar;
   }, "Por favor ingrese un RUT válido."); 
 
+  $("#rut, #email, #password, #password2").on("keyup blur", function() {
+    if ($(this).valid()) {
+      $(this).removeClass("alert alert-danger").addClass("alert alert-success");
+    } else {
+      $(this).removeClass("alert alert-success");
+    }
+  });
   
   $("#formulario1").validate({
     rules: {
@@ -144,6 +151,9 @@ $(document).ready(function(){
         required: "El rut es un campo obligatorio",
         rutChileno: "El formato del rut no es válido"
       },
+
+
+
       email: {
         required: "El email es un campo requerido",
         email: "El email no cumple el formato de un correo",
@@ -157,6 +167,14 @@ $(document).ready(function(){
         equalTo: "Debe ser igual al campo contraseña",
       },
     },
+    errorElement: "div",
+    errorClass: "alert alert-danger",
+    errorPlacement: function(error, element) {
+      error.appendTo(element.closest(".mb-3"));
+    },
+
+
+
   });
 
 
