@@ -34,7 +34,6 @@
     <div id="navbar">
 
     </div>
-    <br><br><br>
     <!-- titulo -->
     <h1 class="text-center">Registro de cliente</h1>
     <br/>
@@ -112,56 +111,26 @@
               <div class="invalid-feedback">El email es obligatorio</div>
             </div>
 
-            <!-- direccion -->
-            <div class="row">
-              <!-- calle -->
-              <div class="col mb-3">
-                <label for="street" class="form-label">Calle</label>
-                <input
-                  required
-                  type="text"
-                  placeholder="San Pablo"
-                  class="form-control"
-                  id="street"
-                  aria-describedby="streetHelp"
-                />
-                <div id="streetHelp" class="form-text">
-                  Ingrese su calle o avenida
-                </div>
-                <div class="invalid-feedback">
-                  La calle o avenida es obligatoria
-                </div>
+            <!-- calle -->
+            <div class="col mb-3">
+              <label for="street" class="form-label">Calle</label>
+              <input
+                required
+                type="text"
+                placeholder="San Pablo"
+                class="form-control"
+                id="street"
+                aria-describedby="streetHelp"
+              />
+              <div id="streetHelp" class="form-text">
+                Ingrese su calle o avenida
               </div>
-              <!-- numero -->
-              <div class="col mb-3">
-                <label for="number" class="form-label">Numero</label>
-                <input
-                  required
-                  type="text"
-                  placeholder="2021"
-                  class="form-control"
-                  id="number"
-                  aria-describedby="numberHelp"
-                />
-                <div id="numberHelp" class="form-text">
-                  Ingrese el numero de la direccion
-                </div>
-                <div class="invalid-feedback">El numero es obligatorio</div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="opciones-select" class="form-label"
-                >Seleccione una opción</label
-              >
-              <select class="form-select" id="opciones-select" required>
-                <option value="" disabled selected>Comuna</option>
-                <!-- Las opciones se cargarán aquí dinámicamente desde el archivo JSON -->
-              </select>
               <div class="invalid-feedback">
-                Por favor seleccione una Comuna.
+                La calle o avenida es obligatoria
               </div>
             </div>
+            
+
 
             <div class="mb-3">
               <label for="password">Contraseña</label>
@@ -277,7 +246,6 @@
 
     <!-- script archivo js -->
     <script src="js/script.js"></script>
-    <script src="js/script_registro.js"></script>
     <!-- cdn slick -requiere jquery -->
     <script
       type="text/javascript"

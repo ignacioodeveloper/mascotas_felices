@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
   // funcion que obtiene datos de api fakestore
   $('#btn-obtener-ropas').click(function() {
     
@@ -144,6 +146,10 @@ $(document).ready(function(){
         required: true,
         equalTo: "#password",
       },
+      password_login: {
+        required: true,
+
+      }
     }, // --> Fin de reglas
 
     messages: {
@@ -166,6 +172,9 @@ $(document).ready(function(){
         required: "Repita la contraseña anterior",
         equalTo: "Debe ser igual al campo contraseña",
       },
+      password_login: {
+        required: "Ingrese su contraseña",
+      }
     },
     errorElement: "div",
     errorClass: "alert alert-danger",
