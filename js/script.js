@@ -1,10 +1,6 @@
 $(document).ready(function(){
 
 
-
-  // funcion que obtiene datos de api fakestore
-  $('#btn-obtener-ropas').click(function() {
-    
     // funcion obtener datos api fakestore
     $.get('https://fakestoreapi.com/products',
     
@@ -18,14 +14,13 @@ $(document).ready(function(){
             fila += '<td>' + item.title + '</td>';
             fila += '<td>' + item.description + '</td>';
             fila += '<td>' + item.price + '</td>';
-            fila += '<td><img src="'+ item.image +'"></td>';
+            fila += '<td><img style="height: 50px" src="'+ item.image +'"></td>';
 
             fila += '</tr>';
 
             $('#tabla-ropas').append(fila);
         });
     });
-  });
 
   // funcion carrusel
   $('.slick-carousel').slick({
