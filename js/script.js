@@ -2,30 +2,6 @@ $(document).ready(function(){
 
 
 
-  // funcion que obtiene datos de api fakestore
-  $('#btn-obtener-ropas').click(function() {
-    
-    // funcion obtener datos api fakestore
-    $.get('https://fakestoreapi.com/products',
-    
-    function(datos) 
-    {   
-        $('#tabla-ropas tbody').empty();
-        $.each(datos, function(i, item) {
-            
-            var fila = '';
-            fila += '<tr>' ;
-            fila += '<td>' + item.title + '</td>';
-            fila += '<td>' + item.description + '</td>';
-            fila += '<td>' + item.price + '</td>';
-            fila += '<td><img src="'+ item.image +'"></td>';
-
-            fila += '</tr>';
-
-            $('#tabla-ropas').append(fila);
-        });
-    });
-  });
 
   // funcion carrusel
   $('.slick-carousel').slick({
@@ -146,10 +122,7 @@ $(document).ready(function(){
         required: true,
         equalTo: "#password",
       },
-      password_login: {
-        required: true,
 
-      }
     }, // --> Fin de reglas
 
     messages: {
@@ -172,9 +145,7 @@ $(document).ready(function(){
         required: "Repita la contraseña anterior",
         equalTo: "Debe ser igual al campo contraseña",
       },
-      password_login: {
-        required: "Ingrese su contraseña",
-      }
+
     },
     errorElement: "div",
     errorClass: "alert alert-danger",
