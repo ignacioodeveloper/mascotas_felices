@@ -1,4 +1,9 @@
 
+#precio {
+  outline: black solid 3px;
+}
+
+
 /* hover para card_productos */
 .card_productos:hover section {
   border: 1px solid #000000;
