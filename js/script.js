@@ -169,10 +169,14 @@ $(document).ready(function(){
       },
       direccion: {
         required: true,
+      },
+      selectBodega: {
+        required: true,
       }
     }, // --> Fin de reglas
 
     messages: {
+
       direccion: {
         required: "Ingrese una direccion valida",
       },
@@ -216,6 +220,9 @@ $(document).ready(function(){
       },
       descuento: {
         required: "Ingrese el Descuento",
+      },
+      selectBodega: {
+        required: "Porfavor seleccione una opcion"
       },
 
     },
