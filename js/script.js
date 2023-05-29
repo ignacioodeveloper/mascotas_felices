@@ -129,6 +129,10 @@ $(document).ready(function(){
         required: true,
         rutChileno: true
       },
+      iduser: {
+        required: true,
+
+      },
       name:{
         required: true,
       },
@@ -160,11 +164,26 @@ $(document).ready(function(){
       descuento: {
         required: true,
       },
+      lastname: {
+        required: true,
+      },
+      direccion: {
+        required: true,
+      }
     }, // --> Fin de reglas
 
     messages: {
+      direccion: {
+        required: "Ingrese una direccion valida",
+      },
+      iduser: {
+        required: "Ingrese el ID del Usuario",
+      },
       descripcion:{
         required: "Ingrese la descripcion",
+      },
+      lastname:{
+        required: "Ingrese el Apellido",
       },
       name:{
         required: "Ingrese el Nombre",
@@ -210,6 +229,9 @@ $(document).ready(function(){
 
   });
 
+  $('#generarContrasena').click(function() {
+    $('#passwordgenerate').val('Duoc@2023');
+  });
 
 
 });
