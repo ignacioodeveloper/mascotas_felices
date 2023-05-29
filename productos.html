@@ -19,178 +19,197 @@
     <div id="navbar">
 
     </div>
-    
-        <!-- formulario de producto -->
-        <h1 style="text-align: center;">Mantenedor de productos</h1>
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="container-fluid">
-            <!-- todos los datos del producto -->
-            <div class="row">
-              <!-- datos del producto -->
-              <div class="col-sm-12 col-md-6" id="datos">
-                <!-- ID -->
-                <div class="mb-3">
-                  <label for="idprod" class="form-label">ID</label>
-                  <input
-                    required
-                    type="text"
-                    placeholder="35"
-                    class="form-control"
-                    id="idprod"
-                    aria-describedby="idprodHelp"
-                  />
-                  <div id="idprodHelp" class="form-text">
-                    Inserte el id del producto
-                  </div>
-                  <div class="invalid-feedback">El campo id es obligatorio</div>
-                </div>
-    
-                <!-- Categoria y nombre -->
-                <div class="row">
-                  <!-- Categoría del producto -->
-                  <div class="col mb-3">
-                    <label for="categoria" class="form-label">Categoría</label>
-                    <select required class="form-select" aria-label="Default">
-                      <option selected>Seleccione una opción</option>
-                      <option value="1">Perros</option>
-                      <option value="2">Gatos</option>
-                      <option value="3">Otros</option>
-                    </select>
-                    <div class="invalid-feedback">Debes seleccionar una opcion</div>
-                  </div>
 
-                  <!-- Nombre del producto -->
-                  <div class="col mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input
-                      required
-                      type="text"
-                      placeholder="Ingresa el nombre del producto"
-                      class="form-control"
-                      id="rut"
-                      aria-describedby="nombreHelp"
-                    />
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-    
-                <!-- Descripción -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="desc" class="form-label">Descripción</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="desc"
-                      aria-describedby="descHelp"
-                    />
-                    <div id="descHelp" class="form-text">
-                      Ingrese una descripcion para el producto
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
+    <h1 class="container">Mantenedor de Productos</h1>
+    <br><br>
 
-                <!-- Precio del producto -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="precioprod" class="form-label">Precio</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="precioprod"
-                      aria-describedby="precioHelp"
-                    />
-                    <div id="precioHelp" class="form-text">
-                      Ingresa un precio para el producto
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
+    <!-- editar productos -->
+    <form class="row g-4" method="POST" id="formulario1" novalidate>
+      <div class="container-fluid">
+        <!-- todos los datos del cliente -->
+        <div class="row justify-content-center">
+          <!-- datos del cliente -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
 
-                <!-- Descuento subscriptor -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="descsub" class="form-label">Descuento subscriptor</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="descsub"
-                      aria-describedby="descsubHelp"
-                    />
-                    <div id="descsubHelp" class="form-text">
-                      Ingresa un descuento para el subscriptor
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Descuento por oferta -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="descsub" class="form-label">Descuento por oferta</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="descoferta"
-                      aria-describedby="descofertaHelp"
-                    />
-                    <div id="descofertaHelp" class="form-text">
-                      Ingresa un descuento de oferta
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- foto del producto -->
-              <div class="col-sm-12 col-md-6 text-center" id="foto">
-                <img src="img/icon_user.jpg" alt="" />
-                <br />
-                <br />
-                <div>
-                  <label for="formFileLg" class="form-label"
-                    >Selecciona una foto del producto</label
-                  >
-                  <input
-                    class="form-control form-control-lg"
-                    id="formFileLg"
-                    type="file"
-                  />
-                </div>
-              </div>
+            <!-- id -->
+            <div class="mb-3">
+              <label for="id_producto">Id</label>
+              <input
+                type="text"
+                id="id_producto"
+                name="id_producto"
+                class="form-control"
+                placeholder="35"
+                value="" 
+                required
+              />
             </div>
 
-            <!-- botones -->
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary">Guardar</button>
-              <button type="submit" class="btn btn-primary">Nuevo</button>
-              <button type="reset" class="btn btn-primary">Eliminar</button>
+            <!-- categorias -->
+            <div class="col mb-3">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select required class="form-select" aria-label="Default">
+                <option selected>Seleccione una opción</option>
+                <option value="1">Perros</option>
+                <option value="2">Gatos</option>
+                <option value="3">Otros</option>
+              </select>
+              <div class="invalid-feedback">Debes seleccionar una opcion</div>
+            </div>              
+            
+            <!-- nombre producto -->
+            <div class="col mb-3">
+              <label for="name" class="form-label">Nombre Producto</label>
+              <input
+                
+                type="text"
+                placeholder="Saco Alimento 10 kg"
+                class="form-control"
+                id="name"
+                name="name"
+                />
             </div>
 
+            <!-- descripcion producto -->
+            <div class="col mb-3">
+              <label for="descripcion" class="form-label">Descripcion Producto</label>
+              <input
+                
+                type="text"
+                placeholder="Alimento para perros"
+                class="form-control"
+                id="descripcion"
+                name="descripcion"
+
+              />
+
+            </div>
+            
+            <!-- precio producto -->
+            <div class="col mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input
+                
+                type="text"
+                placeholder="8000"
+                class="form-control"
+                id="precio"
+                name="precio"
+
+              />
+
+            </div> 
+
+            <!-- descuento subscriptor -->
+            <div class="col mb-3">
+              <label for="descuento" class="form-label">Descuento Subscriptor</label>
+              <input
+                
+                type="text"
+                placeholder="5%"
+                class="form-control"
+                id="descuento"
+                name="descuento"
+
+              />
+
+            </div>            
+            
+            <!-- descuento por oferta -->
+            <div class="col mb-3">
+              <label for="descuento" class="form-label">Descuento por Oferta</label>
+              <input
+                
+                type="text"
+                placeholder="2%"
+                class="form-control"
+                id="descuento"
+                name="descuento"
+
+              />
+
+            </div>
+            
           </div>
 
-        </form>
-    
+          <!-- foto cliente -->
+          <div class="col-sm-12 col-md-4 text-center" id="foto">
+            <img class="container-fluid" src="img/icon_user.webp" alt="" />
+            <br />
+            <br />
+            <div>
+              <label for="formFileLg" class="form-label"
+                >Large file input example</label
+              >
+              <input
+                class="form-control form-control-lg"
+                id="formFileLg"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- botones -->
+        <div class="row" id="botones">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="reset" class="btn btn-outline-primary">Nuevo</button>
+            <button type="reset" class="btn btn-danger">Eliminar</button>
+
+          </div>
+      </div>
+      </div>
+    </form>
+    <br><br>
+    <!-- tabla productos -->
+    <table class="container">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categoria</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>% Desc. Subscriptor</th>
+          <th>% Desc. Oferta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>423</td>
+          <td>Gato</td>
+          <td>Saco Alimento Royal Canin</td>
+          <td>Alimento de perros 3kg</td>
+          <td>$15.000</td>
+          <td>2%</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>423</td>
+          <td>Gato</td>
+          <td>Saco Alimento Royal Canin</td>
+          <td>Alimento de perros 3kg</td>
+          <td>$15.000</td>
+          <td>2%</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>423</td>
+          <td>Gato</td>
+          <td>Saco Alimento Royal Canin</td>
+          <td>Alimento de perros 3kg</td>
+          <td>$15.000</td>
+          <td>2%</td>
+          <td>5%</td>
+        </tr>
+
+      </tbody>
+    </table>
 
     <div id="footer">
 
     </div>
+
 
     <!-- cdn bootstrap -->
     <script
@@ -207,9 +226,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- cdn jquery validate despues de jquery normal -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+
     <!-- script archivo js -->
     <script src="js/script.js"></script>
-
     <!-- cdn slick -requiere jquery -->
     <script
       type="text/javascript"

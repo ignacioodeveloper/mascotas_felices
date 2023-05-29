@@ -129,6 +129,9 @@ $(document).ready(function(){
         required: true,
         rutChileno: true
       },
+      name:{
+        required: true,
+      },
       email: {
         required: true,
         email: true,
@@ -143,17 +146,33 @@ $(document).ready(function(){
       },
       password_login: {
         required: true,
-
-      }
+      },
+      // reglas mantenedor de productos
+      id_producto: {
+        required: true,
+      },
+      descripcion:{
+        required: true,
+      },
+      precio: {
+        required: true,
+      },
+      descuento: {
+        required: true,
+      },
     }, // --> Fin de reglas
 
     messages: {
+      descripcion:{
+        required: "Ingrese la descripcion",
+      },
+      name:{
+        required: "Ingrese el Nombre",
+      },
       rut: {
         required: "El rut es un campo obligatorio",
         rutChileno: "El formato del rut no es válido"
       },
-
-
 
       email: {
         required: "El email es un campo requerido",
@@ -169,7 +188,17 @@ $(document).ready(function(){
       },
       password_login: {
         required: "Ingrese su contraseña",
-      }
+      },
+      id_producto: {
+        required: "Ingresa un ID",
+      },
+      precio: {
+        required: "Ingresa el Precio del Producto",
+      },
+      descuento: {
+        required: "Ingrese el Descuento",
+      },
+
     },
     errorElement: "div",
     errorClass: "alert alert-danger",
