@@ -1,7 +1,26 @@
 $(document).ready(function(){
 
 
+    // funcion obtener datos api fakestore
+    $.get('https://fakestoreapi.com/products',
+    
+    function(datos) 
+    {   
+        $('#tabla-ropas tbody').empty();
+        $.each(datos, function(i, item) {
+            
+            var fila = '';
+            fila += '<tr>' ;
+            fila += '<td>' + item.title + '</td>';
+            fila += '<td>' + item.description + '</td>';
+            fila += '<td>' + item.price + '</td>';
+            fila += '<td><img style="height: 50px" src="'+ item.image +'"></td>';
 
+            fila += '</tr>';
+
+            $('#tabla-ropas').append(fila);
+        });
+    });
 
   // funcion carrusel
   $('.slick-carousel').slick({
@@ -110,6 +129,13 @@ $(document).ready(function(){
         required: true,
         rutChileno: true
       },
+      iduser: {
+        required: true,
+
+      },
+      name:{
+        required: true,
+      },
       email: {
         required: true,
         email: true,
@@ -122,16 +148,54 @@ $(document).ready(function(){
         required: true,
         equalTo: "#password",
       },
-
+      password_login: {
+        required: true,
+      },
+      // reglas mantenedor de productos
+      id_producto: {
+        required: true,
+      },
+      descripcion:{
+        required: true,
+      },
+      precio: {
+        required: true,
+      },
+      descuento: {
+        required: true,
+      },
+      lastname: {
+        required: true,
+      },
+      direccion: {
+        required: true,
+      },
+      selectBodega: {
+        required: true,
+      }
     }, // --> Fin de reglas
 
     messages: {
+
+      direccion: {
+        required: "Ingrese una direccion valida",
+      },
+      iduser: {
+        required: "Ingrese el ID del Usuario",
+      },
+      descripcion:{
+        required: "Ingrese la descripcion",
+      },
+      lastname:{
+        required: "Ingrese el Apellido",
+      },
+      name:{
+        required: "Ingrese el Nombre",
+      },
       rut: {
         required: "El rut es un campo obligatorio",
         rutChileno: "El formato del rut no es válido"
       },
-
-
 
       email: {
         required: "El email es un campo requerido",
@@ -145,6 +209,21 @@ $(document).ready(function(){
         required: "Repita la contraseña anterior",
         equalTo: "Debe ser igual al campo contraseña",
       },
+      password_login: {
+        required: "Ingrese su contraseña",
+      },
+      id_producto: {
+        required: "Ingresa un ID",
+      },
+      precio: {
+        required: "Ingresa el Precio del Producto",
+      },
+      descuento: {
+        required: "Ingrese el Descuento",
+      },
+      selectBodega: {
+        required: "Porfavor seleccione una opcion"
+      },
 
     },
     errorElement: "div",
@@ -157,6 +236,9 @@ $(document).ready(function(){
 
   });
 
+  $('#generarContrasena').click(function() {
+    $('#passwordgenerate').val('Duoc@2023');
+  });
 
 
 });

@@ -35,7 +35,7 @@
 
     </div>
     <!-- titulo -->
-    <h1 class="text-center">Registro de cliente</h1>
+    <h1 class="container">Registro de cliente</h1>
     <br/>
 
     <!-- formulario de cliente -->
@@ -55,10 +55,8 @@
                 name="rut"
                 class="form-control"
                 placeholder="Escriba su Rut sin puntos y con guion"
-                value=""
-                required 
+                 
               />
-              <div class="invalid-feedback">El campo rut es obligatorio</div>
             </div>
 
 
@@ -69,28 +67,28 @@
               <div class="col mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
-                  required
+                  
                   type="text"
                   placeholder="Ingresa tu nombre"
                   class="form-control"
                   id="name"
+                  name="name"
                   aria-describedby="nameHelp"
                 />
-                <div id="nameHelp" class="invalid-feedback">Ingrese un nombre válido (más de 2 letras y solo letras).</div>
               </div>
 
               <!-- apellidos -->
               <div class="col mb-3">
                 <label for="lastname" class="form-label">Apellido</label>
                 <input
-                  required
+                  
                   type="text"
                   placeholder="Ingresa tu apellido"
                   class="form-control"
                   id="lastname"
+                  name="lastname"
                   aria-describedby="lastnameHelp"
                 />
-                <div class="invalid-feedback">Ingrese el apellido</div>
               </div>
             </div>
 
@@ -104,30 +102,28 @@
                 class="form-control"
                 placeholder="Ingrese su email aquí"
                 value=""
-                required 
+                 
                 aria-describedby="emailHelp"
               />
               <div id="emailHelp" class="form-text">Escriba su Email</div>
-              <div class="invalid-feedback">El email es obligatorio</div>
             </div>
 
-            <!-- calle -->
+            <!-- direccion -->
             <div class="col mb-3">
-              <label for="street" class="form-label">Calle</label>
-              <input
-                required
+              <label for="direccion" class="form-label">Calle</label>
+              <textarea
+                
                 type="text"
                 placeholder="San Pablo"
                 class="form-control"
-                id="street"
+                id="direccion"
                 aria-describedby="streetHelp"
-              />
-              <div id="streetHelp" class="form-text">
+                name="direccion"
+              ></textarea>
+              <div id="direccionHelp" class="form-text">
                 Ingrese su calle o avenida
               </div>
-              <div class="invalid-feedback">
-                La calle o avenida es obligatoria
-              </div>
+
             </div>
             
 
@@ -141,7 +137,7 @@
                 class="form-control"
                 placeholder="Ingresar contraseña del al menos 5 caracteres"
                 value=""
-                required 
+                 
                 aria-describedby="password1Help"
               />
               
@@ -163,12 +159,11 @@
                 class="form-control"
                 placeholder="Repetir contraseña digitada anteriormente"
                 value=""
-                required 
+                 
                 aria-describedby="password2Help"
               />
 
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <div class="invalid-feedback">Las contraseñas no coinciden.</div>
             </div>
 
             <div class="mb-3 form-check">
@@ -207,18 +202,12 @@
         <!-- botones -->
         <div class="row" id="botones">
           <div class="col text-center">
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-primary">Crear Cuenta</button>
             <button type="reset" class="btn btn-primary">Limpiar</button>
           </div>
       </div>
       </div>
     </form>
-
-    <br><br><br>
-
-    
-
-
 
     <div id="footer">
 

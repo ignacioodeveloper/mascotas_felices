@@ -21,17 +21,21 @@
 
     </div>
 
-      <div class="container">
-        <!-- formulario de usuario -->
-        <h1 style="text-align: center;">Mantenedor de usuarios</h1>
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="container-fluid">
-            <!-- todos los datos del usuario -->
-            <div class="row">
-              <!-- datos del usuario -->
-              <div class="col-sm-12 col-md-6" id="datos">
-                <!-- ID -->
-                <div class="mb-3">
+    <!-- formulario de usuario -->
+    <h1 class="container">Mantenedor de usuarios</h1>
+      
+    <br><br>
+
+    <!-- formulario de usuario -->
+    <form class="row g-4" method="POST" id="formulario1" novalidate>
+      <div class="container-fluid">
+        <!-- todos los datos del cliente -->
+        <div class="row justify-content-center">
+          <!-- datos del cliente -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+
+            <!-- ID -->
+            <div class="mb-3">
                   <label for="iduser" class="form-label">ID</label>
                   <input
                     required
@@ -39,199 +43,191 @@
                     placeholder="35"
                     class="form-control"
                     id="iduser"
+                    name="iduser"
                     aria-describedby="iduserHelp"
                   />
                   <div id="iduserHelp" class="form-text">
                     Inserte el id del usuario
                   </div>
                   <div class="invalid-feedback">El campo id es obligatorio</div>
-                </div>
+            </div>
                 
-                <!-- checkbox cliente -->
-                <div class="mb-3 form-check-inline">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1">
-                    <p>Cliente</p>
-                  </label>
-                </div>
-
-                <!-- checkbox administrador -->
-                <div class="mb-3 form-check-inline">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1">
-                    <p>Administrador</p>
-                  </label>
-                </div>
-
-                <!-- Rut del usuario -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="rut" class="form-label">RUT</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="rut"
-                      aria-describedby="rutHelp"
-                    />
-                    <div id="rutHelp" class="form-text">
-                      Ejemplo: 12.345.678-K
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Nombres -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="nombresuser" class="form-label">Nombres</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="nombresuser"
-                      aria-describedby="precioHelp"
-                    />
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Apellidos -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="apellidosuser" class="form-label">Apellidos</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="apellidosuser"
-                      aria-describedby="descsubHelp"
-                    />
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Correo -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="correo" class="form-label">Correo electrónico</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="correo"
-                      aria-describedby="descofertaHelp"
-                    />
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Dirección -->
-                <div class="row">
-                  <div class="col mb-3">
-                    <label for="direccion" class="form-label">Dirección</label>
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      id="direccion"
-                      aria-describedby="descofertaHelp"
-                    />
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mb-3 form-check">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1">
-                    <strong>Subscribirme a la Fundacion</strong>
-                  </label>
-                  <div id="nevershaverHelp" class="form-text">
-                    Deseo subscribirme con un aporte de $ 3.000 mensuales y obtener
-                    un 5% de descuento en mis compras.
-                  </div>
-                </div>
-
-                <!-- Generar contraseña -->
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-9">
-                      <label for="descsub" class="form-label">Contraseña</label>
-                      <input 
-                      required
-                      type="text" 
-                      class="form-control"
-                      id="pass"
-                      />
-                    </div>
-                    <div class="row col-md-3">
-                      <button class="btn btn-primary">Generar contraseña</button>
-                    </div>
-                    <div class="invalid-feedback">
-                      Este campo es obligatorio
-                    </div>
-                  </div>
-                </div>
-                
-                
-<br><br>
+            <!-- checkbox cliente -->
+            <div class="row">
+              <div class="col mb-3">
+                <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1">
+                  <p>Cliente</p>
+                </label>
               </div>
-              <!-- foto del usuario -->
-              <div class="col-sm-12 col-md-6 text-center" id="foto">
-                <br>
-                <img src="img/sinfotoperfil.jpg" alt="" width="200px" height="200px"/>
-                <br />
-                <br />
-                <div>
-                  <label for="formFileLg" class="form-label"
-                    >Selecciona una foto de usuario</label
-                  >
-                  <input
-                    class="form-control form-control-lg"
-                    id="formFileLg"
-                    type="file"
-                  />
-                </div>
+              <div class="col mb-3">
+                <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1">
+                  <p>Administrador</p>
+                </label>
               </div>
             </div>
 
-            <!-- botones -->
-            <div class="col-md-3">
-              <button type="submit" class="btn btn-primary">Guardar</button>
-              <button type="submit" class="btn btn-primary">Nuevo</button>
-              <button type="reset" class="btn btn-primary">Eliminar</button>
+            <!-- rut -->
+            <div class="mb-3">
+              <label for="rut">RUT</label>
+              <input
+                type="text"
+                class="form-control"
+
+                id="rut"
+                name="rut"
+                placeholder="Escriba su Rut sin puntos y con guion"
+                aria-describedby="rutHelp"
+              />
             </div>
+
+            <!-- nombre y apellido -->
+            <div class="row">
+              <!-- nombres -->
+              <div class="col mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input
+                  
+                  type="text"
+                  placeholder="Ingresa tu nombre"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  aria-describedby="nameHelp"
+                />
+              </div>
+
+              <!-- apellidos -->
+              <div class="col mb-3">
+                <label for="lastname" class="form-label">Apellido</label>
+                <input
+                  
+                  type="text"
+                  placeholder="Ingresa tu apellido"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  aria-describedby="lastnameHelp"
+                />
+              </div>
+            </div>
+
+            <!-- correo -->
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Ingrese su email aquí"
+                value=""
+                 
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text">Escriba su Email</div>
+            </div>
+
+            <!-- direccion -->
+            <div class="col mb-3">
+              <label for="direccion" class="form-label">Calle</label>
+              <textarea
+                
+                type="text"
+                placeholder="San Pablo"
+                class="form-control"
+                id="direccion"
+                aria-describedby="streetHelp"
+                name="direccion"
+              ></textarea>
+              <div id="direccionHelp" class="form-text">
+                Ingrese su calle o avenida
+              </div>
+
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1">
+                <strong>Subscribirme a la Fundacion</strong>
+              </label>
+              <div id="nevershaverHelp" class="form-text">
+                Deseo subscribirme con un aporte de $ 3.000 mensuales y obtener
+                un 5% de descuento en mis compras.
+              </div>
+            </div> 
+
+
+            <div class="mb-3">
+              <label for="passwordgenerate">Contraseña</label>
+              <div class="row">
+                <div class="col">
+                  <input
+                  type="text"
+                  id="passwordgenerate"
+                  name="passwordgenerate"
+                  class="form-control"
+                  value=""
+                   
+                />
+                </div>
+
+              <div class="col">
+                <button type="button" class="btn btn-primary"  id="generarContrasena">Generar Contraseña</button>
+
+              </div>
+
+              </div>
+            </div>
+
 
           </div>
-          
-        </form>
 
-    <!-- Tabla con registro de usuarios -->
+          <!-- foto cliente -->
+          <div class="col-sm-12 col-md-4 text-center" id="foto">
+            <img class="container-fluid" src="img/icon_user.webp" alt="" />
+            <br />
+            <br />
+            <div>
+              <label for="formFileLg" class="form-label"
+                >Large file input example</label
+              >
+              <input
+                class="form-control form-control-lg"
+                id="formFileLg"
+                type="file"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- botones -->
+        <div class="row" id="botones">
+          <div class="col text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="reset" class="btn btn-outline-primary">Nuevo</button>
+            <button type="reset" class="btn btn-danger">Eliminar</button>
+          </div>
+      </div>
+      </div>
+    </form>
+
+    
     <br><br>
-    <div class="d-flex container-fluid ">
-      <table class="table">
+    <!-- Tabla con registro de usuarios -->
+    <table class="table container">
           <thead>
             <tr>
               <th>ID</th>
@@ -280,37 +276,40 @@
               <td>⬛</td>
             </tr>
           </tbody>
-        </table>
+    </table>
   
   
-        </div>
 
-        <div id="footer">
 
-        </div>
+    <div id="footer">
+
+    </div>
     
-        <!-- cdn bootstrap -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-          crossorigin="anonymous"
-        ></script>
-    
-        <!-- cdn jquery tiene que ir antes de js/script.js
-        tiene que leer primero el jquery y despues el js -->
-        <script
-          src="https://code.jquery.com/jquery-3.6.4.js"
-          integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-          crossorigin="anonymous"
-        ></script>
-    
-        <!-- script archivo js -->
-        <script src="js/script.js"></script>
-    
-        <!-- cdn slick -requiere jquery -->
-        <script
-          type="text/javascript"
-          src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-        ></script>
+    <!-- cdn bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- cdn jquery tiene que ir antes de js/script.js
+    tiene que leer primero el jquery y despues el js -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- cdn jquery validate despues de jquery normal -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+
+    <!-- script archivo js -->
+    <script src="js/script.js"></script>
+    <!-- cdn slick -requiere jquery -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </body>
 </html>

@@ -26,29 +26,28 @@
     <br />
 
     <!-- formulario de cliente -->
-    <form class="row g-4 needs-validation" novalidate>
+    <form class="row g-4" method="POST" id="formulario1" novalidate>
       <div class="container-fluid">
         <!-- todos los datos del cliente -->
         <div class="row justify-content-center">
           <!-- datos del cliente -->
-          <div class="col-sm-12 col-md-4 col-lg-4" id="datos">
+          <div class="col-sm-12 col-md-4 col-lg-4">
 
             <!-- rut -->
             <div class="mb-3">
-              <label for="rut" class="form-label">RUT</label>
+              <label for="rut">RUT</label>
               <input
-                required
                 type="text"
-                placeholder="10123123-k"
-                class="form-control"
                 id="rut"
-                aria-describedby="rutHelp"
+                name="rut"
+                class="form-control"
+                placeholder="Escriba su Rut sin puntos y con guion"
+                value=""
+                 
               />
-              <div id="rutHelp" class="form-text">
-                Escriba rut sin puntos y con guion
-              </div>
-              <div class="invalid-feedback">El campo rut es obligatorio</div>
             </div>
+
+
 
             <!-- nombre y apellido -->
             <div class="row">
@@ -56,99 +55,78 @@
               <div class="col mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
-                  required
+                  
                   type="text"
                   placeholder="Ingresa tu nombre"
                   class="form-control"
-                  id="rut"
-                  aria-describedby="rutHelp"
+                  id="name"
+                  aria-describedby="nameHelp"
                 />
-                <div class="invalid-feedback">Ingrese el Nombre</div>
               </div>
+
               <!-- apellidos -->
               <div class="col mb-3">
-                <label for="name" class="form-label">Apellido</label>
+                <label for="lastname" class="form-label">Apellido</label>
                 <input
-                  required
+                  
                   type="text"
                   placeholder="Ingresa tu apellido"
                   class="form-control"
-                  id="rut"
-                  aria-describedby="rutHelp"
+                  id="lastname"
+                  aria-describedby="lastnameHelp"
                 />
-                <div class="invalid-feedback">Ingrese el apellido</div>
               </div>
             </div>
 
             <!-- correo -->
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
+              <label for="email">Email</label>
               <input
-                required
-                type="text"
-                placeholder="tuemail@tudominio.cl"
+                type="email"
+                id="email"
+                name="email"
                 class="form-control"
-                id="rut"
-                aria-describedby="rutHelp"
+                placeholder="Ingrese su email aquí"
+                value=""
+                 
+                aria-describedby="emailHelp"
               />
-              <div id="rutHelp" class="form-text">Escriba su Email</div>
-              <div class="invalid-feedback">El email es obligatorio</div>
+              <div id="emailHelp" class="form-text">Escriba su Email</div>
             </div>
 
             <!-- direccion -->
-            <div class="row">
-              <!-- calle -->
-              <div class="col mb-3">
-                <label for="email" class="form-label">Calle</label>
-                <input
-                  required
-                  type="text"
-                  placeholder="San Pablo"
-                  class="form-control"
-                  id="rut"
-                  aria-describedby="rutHelp"
-                />
-                <div id="rutHelp" class="form-text">
-                  Ingrese su calle o avenida
-                </div>
-                <div class="invalid-feedback">
-                  La calle o avenida es obligatoria
-                </div>
+            <div class="col mb-3">
+              <label for="direccion" class="form-label">Calle</label>
+              <input
+                
+                type="text"
+                placeholder="San Pablo"
+                class="form-control"
+                id="direccion"
+                aria-describedby="streetHelp"
+              />
+              <div id="direccionHelp" class="form-text">
+                Ingrese su calle o avenida
               </div>
-              <!-- numero -->
-              <div class="col mb-3">
-                <label for="email" class="form-label">Numero</label>
-                <input
-                  required
-                  type="text"
-                  placeholder="2021"
-                  class="form-control"
-                  id="rut"
-                  aria-describedby="rutHelp"
-                />
-                <div id="rutHelp" class="form-text">
-                  Ingrese el numero de la direccion
-                </div>
-                <div class="invalid-feedback">El numero es obligatorio</div>
-              </div>
+
             </div>
+            
+
 
             <div class="mb-3">
-              <label for="opciones-select" class="form-label"
-                >Seleccione una opción</label
-              >
-              <select class="form-select" id="opciones-select" required>
-                <option value="" disabled selected>Comuna</option>
-                <!-- Las opciones se cargarán aquí dinámicamente desde el archivo JSON -->
-              </select>
-              <div class="invalid-feedback">
-                Por favor seleccione una Comuna.
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" name="password1" required aria-describedby="password1Help">
+              <label for="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Ingresar contraseña del al menos 5 caracteres"
+                value=""
+                 
+                aria-describedby="password1Help"
+              />
+              
+              
               <div id="passwordHelp" class="form-text">
                 La contraseña debe tener entre 8 y 20 caracteres, 
                 y que esos caracteres sean letras, números, 
@@ -157,9 +135,20 @@
             </div>
 
             <div class="mb-3">
+
+              <label for="password2">Repetir Contraseña</label>
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                class="form-control"
+                placeholder="Repetir contraseña digitada anteriormente"
+                value=""
+                 
+                aria-describedby="password2Help"
+              />
+
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" name="password2" required pattern="^[\w@-]{8,20}$">
-              <div class="invalid-feedback">Las contraseñas no coinciden.</div>
             </div>
 
             <div class="mb-3 form-check">
@@ -180,12 +169,12 @@
 
           <!-- foto cliente -->
           <div class="col-sm-12 col-md-4 text-center" id="foto">
-            <img src="img/fotoperfil.jpg" alt="" width="500px"/>
+            <img class="container-fluid" src="img/icon_user.webp" alt="" />
             <br />
             <br />
             <div>
               <label for="formFileLg" class="form-label"
-                >Cambia o selecciona tu foto de perfil</label
+                >Large file input example</label
               >
               <input
                 class="form-control form-control-lg"
