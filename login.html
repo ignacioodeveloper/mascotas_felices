@@ -40,6 +40,63 @@
     <div class="container-fluid">
       <br><br>
 
+      <!-- formulario inicar sesion -->
+      <form class="row g-4" method="POST" id="formulario1" novalidate>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <!-- datos del cliente -->
+            <div class="col-sm-12 col-md-4 col-lg-4">
+  
+              <!-- correo -->
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Ingrese su email aquí"
+                  value=""
+                  required 
+                />
+              </div>
+
+              <!-- password -->
+              <div class="mb-3">
+                <label for="password_login">Contraseña</label>
+                <input
+                  type="password"
+                  id="password_login"
+                  name="password_login"
+                  class="form-control"
+                  placeholder="Ingresar contraseña del al menos 5 caracteres"
+                  value=""
+                  required 
+                />
+                
+              
+              </div>
+
+              <!-- buton login -->
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100">Iniciar Sesion</button>
+              </div>
+
+              <!-- not register yet? -->
+              <div class="mb-3 container">
+                No tienes Cuenta? <a href="registro.html" class="text-dark fw-bold"> Registrate Ahora!</a>
+
+              </div>
+            </div>
+  
+          </div>
+
+          <!-- botones -->
+          <div class="row " id="botones">
+
+        </div>
+        </div>
+      </form>
 
 
       
