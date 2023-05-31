@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/icon.png">
-    <title>Mi Perfil</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" />
+    <title>Mascotas Felices</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- bootstrap 5.3 css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,14 +30,13 @@
   </head>
   <body>
 
-
+    
     <div id="navbar">
 
     </div>
-
     <!-- titulo -->
-    <h1 class="text-center">Mis datos</h1>
-    <br />
+    <h1 class="container">Mis Datos</h1>
+    <br/>
 
     <!-- formulario de cliente -->
     <form class="row g-4" method="POST" id="formulario1" novalidate>
@@ -41,9 +54,7 @@
                 id="rut"
                 name="rut"
                 class="form-control"
-                placeholder="Escriba su RUT sin puntos y con guión"
-                value=""
-                 
+                placeholder="Escriba su RUT sin puntos y con guion"
               />
             </div>
 
@@ -58,6 +69,7 @@
                   type="text"
                   class="form-control"
                   id="name"
+                  name="name"
                   aria-describedby="nameHelp"
                 />
               </div>
@@ -69,6 +81,7 @@
                   type="text"
                   class="form-control"
                   id="lastname"
+                  name="lastname"
                   aria-describedby="lastnameHelp"
                 />
               </div>
@@ -92,14 +105,15 @@
             <!-- direccion -->
             <div class="col mb-3">
               <label for="direccion" class="form-label">Dirección</label>
-              <input
+              <textarea
+                
                 type="text"
-                placeholder="Ej: San Pablo #233, Ñuñoa."
+                placeholder="Ej: Padre Alonso de Ovalle #3421, Santiago Centro."
                 class="form-control"
                 id="direccion"
                 aria-describedby="streetHelp"
-              />
-
+                name="direccion"
+              ></textarea>
             </div>
             
 
@@ -183,13 +197,11 @@
       </div>
     </form>
 
-
-
-
     <div id="footer">
 
     </div>
-
+    
+    
     <!-- cdn bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
@@ -205,9 +217,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- cdn jquery validate despues de jquery normal -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+
+
     <!-- script archivo js -->
     <script src="js/script.js"></script>
-
     <!-- cdn slick -requiere jquery -->
     <script
       type="text/javascript"

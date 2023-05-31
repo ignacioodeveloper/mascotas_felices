@@ -187,10 +187,10 @@ $(document).ready(function(){
         required: "Ingrese la descripcion",
       },
       lastname:{
-        required: "Ingrese el Apellido",
+        required: "Apellido es un campo requerido",
       },
       name:{
-        required: "Ingrese el Nombre",
+        required: "Nombre es un campo requerido",
       },
       rut: {
         required: "El rut es un campo obligatorio",
