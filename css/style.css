@@ -47,4 +47,6 @@ al texto de card_productos */
     max-width: 50%;
 }
 
-
+.parrafos{
+  text-align: justify;
+}
