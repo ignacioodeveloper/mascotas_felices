@@ -52,29 +52,16 @@
                   <div class="invalid-feedback">El campo id es obligatorio</div>
             </div>
                 
-            <!-- checkbox cliente -->
-            <div class="row">
-              <div class="col mb-3">
-                <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1">
-                  <p>Cliente</p>
-                </label>
-              </div>
-              <div class="col mb-3">
-                <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1">
-                  <p>Administrador</p>
-                </label>
-              </div>
-            </div>
+            <!-- cliente cliente -->
+            <div class="col mb-3">
+              <label for="categoria" class="form-label">Tipo de Usuario</label>
+              <select required class="form-select" aria-label="Default">
+                <option selected>Seleccione una opción</option>
+                <option value="1">Cliente</option>
+                <option value="2">Administrador</option>
+              </select>
+              <div class="invalid-feedback">Debes seleccionar una opcion</div>
+            </div>  
 
             <!-- rut -->
             <div class="mb-3">
@@ -139,11 +126,11 @@
 
             <!-- direccion -->
             <div class="col mb-3">
-              <label for="direccion" class="form-label">Calle</label>
+              <label for="direccion" class="form-label">Dirección</label>
               <textarea
                 
                 type="text"
-                placeholder="San Pablo"
+                placeholder="Padre Alonso de Ovalle #3123, Santiago Centro."
                 class="form-control"
                 id="direccion"
                 aria-describedby="streetHelp"
