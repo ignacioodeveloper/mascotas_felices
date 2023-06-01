@@ -202,7 +202,7 @@ $(document).ready(function(){
         email: "El email no cumple el formato de un correo",
       },
       password: {
-        required: "La contraseña es una campo obligatorio",
+        required: "La contraseña es obligatoria",
         minlength: "Mínimo 5 caracteres",
       },
       password2: {
