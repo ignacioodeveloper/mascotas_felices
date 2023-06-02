@@ -36,27 +36,24 @@
 
             <!-- ID -->
             <div class="mb-3">
-                  <label for="iduser" class="form-label">ID</label>
+                  <label for="iduser" class="form-label">ID del Usuario</label>
                   <input
                     required
-                    type="text"
+                    type="number"
                     placeholder="35"
                     class="form-control"
                     id="iduser"
                     name="iduser"
                     aria-describedby="iduserHelp"
                   />
-                  <div id="iduserHelp" class="form-text">
-                    Inserte el id del usuario
-                  </div>
                   <div class="invalid-feedback">El campo id es obligatorio</div>
             </div>
                 
             <!-- cliente cliente -->
             <div class="col mb-3">
-              <label for="categoria" class="form-label">Tipo de Usuario</label>
-              <select required class="form-select" aria-label="Default">
-                <option selected>Seleccione una opción</option>
+              <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+              <select class="custom-select" name="selectUsuario" id="selectUsuario">
+                <option selected></option>
                 <option value="1">Cliente</option>
                 <option value="2">Administrador</option>
               </select>
@@ -69,10 +66,9 @@
               <input
                 type="text"
                 class="form-control"
-
                 id="rut"
                 name="rut"
-                placeholder="Escriba su Rut sin puntos y con guion"
+                placeholder="Escriba su RUT sin puntos y con guión"
                 aria-describedby="rutHelp"
               />
             </div>
@@ -85,7 +81,7 @@
                 <input
                   
                   type="text"
-                  placeholder="Ingresa tu nombre"
+                  placeholder=""
                   class="form-control"
                   id="name"
                   name="name"
@@ -99,7 +95,7 @@
                 <input
                   
                   type="text"
-                  placeholder="Ingresa tu apellido"
+                  placeholder=""
                   class="form-control"
                   id="lastname"
                   name="lastname"
@@ -128,7 +124,6 @@
             <div class="col mb-3">
               <label for="direccion" class="form-label">Dirección</label>
               <textarea
-                
                 type="text"
                 placeholder="Padre Alonso de Ovalle #3123, Santiago Centro."
                 class="form-control"
@@ -139,9 +134,9 @@
               <div id="direccionHelp" class="form-text">
                 Ingrese su calle o avenida
               </div>
-
             </div>
 
+            <!-- checkbox -->
             <div class="mb-3 form-check">
               <input
                 type="checkbox"
@@ -157,18 +152,18 @@
               </div>
             </div> 
 
-
+            <!-- Generar Contraseña -->
             <div class="mb-3">
               <label for="passwordgenerate">Contraseña</label>
               <div class="row">
                 <div class="col">
                   <input
-                  type="text"
+                  type="password"
                   id="passwordgenerate"
                   name="passwordgenerate"
                   class="form-control"
                   value=""
-                   
+                  disabled
                 />
                 </div>
 

@@ -43,29 +43,32 @@
             </div>
             <br><br>
             <!-- nombre -->
-            <div class="mb-3">
-
-              <label for="selectBodega">Nombre</label>
-              <select class="custom-select" name="selectBodega" id="selectBodega">
-                <option selected></option>
-                <option value="1">Saco Royan Canin</option>
-                <option value="2">Michiflow</option>
-                <option value="3">Don cuchito</option>
-              </select>
-
+            <div class="col mb-3">
+              <label for="name" class="form-label">Nombre del Producto</label>
+              <input
+                
+                type="text"
+                placeholder=""
+                class="form-control"
+                id="name"
+                name="name"
+                aria-describedby="nameHelp"
+              />
             </div>
             <br><br>
             <!-- cantidad -->
             <div class="mb-3">
-
-              <label for="selectBodega">Cantidad</label>
-              <select class="custom-select" name="selectBodega" id="selectBodega">
-                <option selected></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-
+              <label for="cantProd" class="form-label">Cantidad</label>
+              <input
+                required
+                type="number"
+                placeholder="25"
+                class="form-control"
+                id="cantProd"
+                name="cantProd"
+                aria-describedby="cantProdHelp"
+              />
+              <div class="invalid-feedback">El campo id es obligatorio</div>
             </div>
           </div>
           </div>

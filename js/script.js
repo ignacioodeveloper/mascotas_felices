@@ -172,7 +172,23 @@ $(document).ready(function(){
       },
       selectBodega: {
         required: true,
+      },
+      //Regla mantenedor de productos
+      selectCategoria: {
+        required: true,
+      },
+      //Regla mantenedor de usuarios
+      selectUsuario: {
+        required: true,
+      },
+      //Reglas mantenedor de bodega
+      cantProd: {
+        required: true,
+      },
+      nombreProd: {
+        required: true,
       }
+
     }, // --> Fin de reglas
 
     messages: {
@@ -224,6 +240,18 @@ $(document).ready(function(){
       selectBodega: {
         required: "Porfavor seleccione una opcion"
       },
+      selectCategoria: {
+        required: "Porfavor seleccione una opcion"
+      },
+      selectUsuario: {
+        required: "Porfavor seleccione una opcion"
+      },
+      nombreProd: {
+        required: "Porfavor seleccione una opcion",
+      },
+      cantProd: {
+        required: "Porfavor ingrese una cantidad válida",
+      }
 
     },
     errorElement: "div",
